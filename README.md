@@ -8,8 +8,10 @@ program locations. To capture the diffs instrument the source as follows.
 ```
 #include "perf_diff.h"
 
+__perf_handle* h;
+
 int main(int argc, char** argv) {
-  __perf_handle* h = __init_perf(argc, argv); // Setup perf events.
+  h = __init_perf(argc, argv); // Setup perf events.
   assert(h != NULL);
   
   // Rest of main.
