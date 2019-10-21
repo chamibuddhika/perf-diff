@@ -8,10 +8,15 @@ program locations. To capture the diffs instrument the source as follows.
 ```
 #include "perf_diff.h"
 
-void some_fn() {
+int main(int argc, char** argv) {
   __perf_handle* h = __init_perf(argc, argv); // Setup perf events.
   assert(h != NULL);
+  
+  // Rest of main.
+  ...
+}
 
+void some_fn() {
   __start_perf(h);  // Start event capture.
   
   // Code to measure goes here.
