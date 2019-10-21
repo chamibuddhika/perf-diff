@@ -20,14 +20,14 @@ void some_fn() {
 }
 ```
 
-The event captured is configured via `PERF_EVENTS` enviornment variable. Set it
-to a comma seperated list of events. Event names are same as those listed by a
-`perf list` as pre-defined events. Currently we only support first three groups
-of events (i.e: Hardware event, Software event, Hardware cache event) listed 
-there.
+The events captured is configured by setting `PERF_EVENTS` enviornment variable. 
+Set it to a comma seperated list of events. Event names are same as those listed
+by a `perf list` as pre-defined events. Currently we only support first three 
+groups of events (i.e: Hardware event, Software event, Hardware cache event) 
+listed there.
 
 You can control the output file location by setting `PERF_OUTPUT`. The generated
- output will be in csv format.
+output will be in csv format.
 
 If you are doing performance optimization work which requires inspecting
 micro-architectural event differences between optimizations then you can use
